@@ -1,18 +1,19 @@
 package com.example.models;
+import java.sql.Date;
 
 
 public class PagFuncionarios {
     private int id;
-    private int fk_funcionarios;
-    private int fk_setor;
-    private String data_pagto;
+    private String fk_funcionarios;
+    private String fk_setor;
+    private Date data_pagto;
     private double salario_base;
     private double descontos;
     private double valor_liquido;
     private boolean status;
 
 
-public PagFuncionarios(int id, int fk_funcionarios, int fk_setor, String data_pagto, double salario_base, double descontos, double valor_liquido, boolean status){
+public PagFuncionarios(int id, String fk_funcionarios, String fk_setor, Date data_pagto, double salario_base, double descontos, double valor_liquido, boolean status){
     this.id = id;
     this.fk_funcionarios = fk_funcionarios;
     this.fk_setor = fk_setor;
@@ -31,27 +32,27 @@ public void  setId(int id){
     this.id = id;
 }
 
-public int getFk_funcionarios(){
+public String getFk_funcionarios(){
     return fk_funcionarios;
 }
 
-public void setFk_funcionarios(int fk_funcionarios){
+public void setFk_funcionarios(String fk_funcionarios){
     this.fk_funcionarios = fk_funcionarios;
 }
 
-public int getFk_setor(){
+public String getFk_setor(){
     return fk_setor;
 }
 
-public void setFk_setor(int fk_setor){
+public void setFk_setor(String fk_setor){
     this.fk_setor = fk_setor;
 }
 
-public String getData_pagto(){
+public Date getData_pagto(){
     return data_pagto;
 }
 
-public void setData_pagto(String data_pagto){
+public void setData_pagto(Date data_pagto){
     this.data_pagto = data_pagto;
 }
 
